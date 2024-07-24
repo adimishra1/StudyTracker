@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="login-container">
+        <form id="login-form">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <p id="login-error"></p>
+        </form>
+    </div>
+    <header id="main-content" style="display: none;">
+        <div class="container">
+            <h1>Study Tracker</h1>
+            <p>Your Personal Exam Preparation Assistant</p>
+        </div>
+    </header>
+    <main id="main-content" style="display: none;">
+        <section id="about">
+            <div class="container">
+                <h2>About Our Product</h2>
+                <p>Our Study Tracker helps students preparing for competitive exams like GATE, JEE, NEET, UPSC, and more. It tracks study progress, analyzes performance, and optimizes preparation strategies.</p>
+            </div>
+        </section>
+        <section id="features">
+            <div class="container">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Progress Tracking</li>
+                    <li>Performance Analytics</li>
+                    <li>Goal Setting</li>
+                    <li>Personalized Recommendations</li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have questions or want to know more? Reach out to us!</p>
+                <form>
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer id="main-content" style="display: none;">
+        <div class="container">
+            <p>&copy; 2024 Study Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
