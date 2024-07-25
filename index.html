@@ -6,9 +6,23 @@
     <title>Study Tracker</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <div id="login-container">
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Study Tracker</h1>
+                <div class="nav-buttons">
+                    <button id="login-button" class="btn">Login</button>
+                    <button id="signup-button" class="btn">Sign Up</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="login-container" class="modal">
         <form id="login-form">
             <h2>Login</h2>
             <input type="text" id="username" placeholder="Username" required>
@@ -17,28 +31,57 @@
             <p id="login-error"></p>
         </form>
     </div>
-    <header id="main-content" style="display: none;">
-        <div class="container">
-            <h1>Study Tracker</h1>
-            <p>Your Personal Exam Preparation Assistant</p>
-        </div>
-    </header>
-    <main id="main-content" style="display: none;">
+
+    <div id="signup-container" class="modal">
+        <form id="signup-form">
+            <h2>Sign Up</h2>
+            <input type="text" id="new-username" placeholder="Username" required>
+            <input type="password" id="new-password" placeholder="Password" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit">Sign Up</button>
+            <p id="signup-error"></p>
+        </form>
+    </div>
+
+    <main id="main-content">
+        <section id="hero">
+            <div class="container">
+                <h1>Your Personal Exam Preparation Assistant</h1>
+                <p>Our Study Tracker helps students preparing for competitive exams like GATE, JEE, NEET, UPSC, and more. It tracks study progress, analyzes performance, and optimizes preparation strategies.</p>
+                <a href="#about" class="btn">Learn More</a>
+            </div>
+        </section>
         <section id="about">
             <div class="container">
                 <h2>About Our Product</h2>
-                <p>Our Study Tracker helps students preparing for competitive exams like GATE, JEE, NEET, UPSC, and more. It tracks study progress, analyzes performance, and optimizes preparation strategies.</p>
+                <p>Our Study Tracker provides comprehensive tracking and analysis to help students achieve their goals.</p>
             </div>
         </section>
         <section id="features">
             <div class="container">
                 <h2>Key Features</h2>
-                <ul>
-                    <li>Progress Tracking</li>
-                    <li>Performance Analytics</li>
-                    <li>Goal Setting</li>
-                    <li>Personalized Recommendations</li>
-                </ul>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Progress Tracking</h3>
+                        <p>Monitor your study progress over time and stay on track.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Performance Analytics</h3>
+                        <p>Analyze your performance and identify areas for improvement.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Goal Setting</h3>
+                        <p>Set and achieve your study goals effectively.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Personalized Recommendations</h3>
+                        <p>Receive tailored study recommendations based on your progress.</p>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="contact">
@@ -54,7 +97,8 @@
             </div>
         </section>
     </main>
-    <footer id="main-content" style="display: none;">
+
+    <footer>
         <div class="container">
             <p>&copy; 2024 Study Tracker. All rights reserved.</p>
         </div>
