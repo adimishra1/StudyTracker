@@ -1,46 +1,259 @@
-/* Add existing styles here */
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-#login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
     background-color: #f4f4f4;
 }
 
-#login-form {
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header nav {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.nav-buttons {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.nav-buttons .btn {
+    background: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.nav-buttons .btn:hover {
+    background: #45a049;
+}
+
+/* Hero Section */
+#hero {
+    background: #4CAF50;
+    color: #fff;
+    padding: 60px 0;
     text-align: center;
 }
 
-#login-form h2 {
+#hero h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-#login-form input {
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#hero .btn {
+    background: #fff;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#hero .btn:hover {
+    background: #e0e0e0;
+}
+
+/* About Section */
+#about {
+    background: #fff;
+    padding: 40px 0;
+}
+
+#about h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#about p {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Features Section */
+#features {
+    background: #f9f9f9;
+    padding: 40px 0;
+}
+
+#features h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.feature {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature i {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 0.9em;
+}
+
+/* Contact Section */
+#contact {
+    background: #fff;
+    padding: 40px 0;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: auto;
+}
+
+#contact input, #contact textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-#login-form button {
+#contact button {
+    display: block;
     width: 100%;
     padding: 10px;
-    background: #333;
+    background: #4CAF50;
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-#login-form button:hover {
-    background: #555;
+#contact button:hover {
+    background: #45a049;
 }
 
-#login-error {
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Login Form */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+#login-container, #signup-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#login-form, #signup-form {
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+#login-form h2, #signup-form h2 {
+    margin-bottom: 20px;
+}
+
+#login-form input, #signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#login-form button, #signup-form button {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#login-form button:hover, #signup-form button:hover {
+    background: #45a049;
+}
+
+#login-error, #signup-error {
     color: red;
     margin-top: 10px;
 }
