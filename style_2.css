@@ -1,0 +1,164 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header nav {
+    background: #333;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header .btn {
+    background: #4CAF50;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+header .btn:hover {
+    background: #45a049;
+}
+
+/* Logout Button */
+#logout-button {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+/* Taxonomy */
+#taxonomy {
+    background: #fff;
+    padding: 20px;
+    width: 250px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#taxonomy h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#taxonomy ul {
+    list-style: none;
+    padding: 0;
+}
+
+#taxonomy li {
+    margin-bottom: 10px;
+}
+
+#taxonomy a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+#taxonomy a:hover {
+    color: #4CAF50;
+}
+
+/* Main Content */
+#main-content {
+    margin-left: 270px; /* to account for the taxonomy sidebar */
+    padding: 20px;
+    flex: 1;
+}
+
+/* User Info Section */
+#user-info {
+    margin-bottom: 20px;
+}
+
+.user-details {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.username {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.goal {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.goal-highlight {
+    color: #FF5722;
+}
+
+/* Charts Section */
+#charts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.chart {
+    flex: 1;
+    min-width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+canvas {
+    width: 100% !important;
+    height: 250px !important;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
